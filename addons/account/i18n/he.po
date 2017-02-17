@@ -4,13 +4,14 @@
 # 
 # Translators:
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2014
+# Yves Goldberg <admin@ygol.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-21 14:07+0000\n"
-"PO-Revision-Date: 2015-08-19 09:27+0000\n"
-"Last-Translator: Martin Trigaux\n"
+"POT-Creation-Date: 2015-10-15 06:40+0000\n"
+"PO-Revision-Date: 2017-02-04 12:09+0000\n"
+"Last-Translator: Yves Goldberg <admin@ygol.com>\n"
 "Language-Team: Hebrew (http://www.transifex.com/odoo/odoo-8/language/he/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -45,7 +46,7 @@ msgid ""
 "    <br/>\n"
 "    <p>It is also possible to directly pay with Paypal:</p>\n"
 "        <a style=\"margin-left: 120px;\" href=\"${object.paypal_url}\">\n"
-"            <img class=\"oe_edi_paypal_button\" src=\"https://www.paypal.com/en_US/i/btn/btn_paynowCC_LG.gif\"/>\n"
+"            <img class=\"oe_edi_paypal_button\" src=\"/account/static/src/img/btn_paynowcc_lg.gif\"/>\n"
 "        </a>\n"
 "    % endif\n"
 "    \n"
@@ -100,10 +101,17 @@ msgid ""
 msgstr ""
 
 #. module: account
-#: code:addons/account/account.py:1468
+#: code:addons/account/account.py:1477
 #, python-format
 msgid " Centralisation"
 msgstr ""
+
+#. module: account
+#. openerp-web
+#: code:addons/account/static/src/js/account_widgets.js:521
+#, python-format
+msgid " seconds"
+msgstr "שניות"
 
 #. module: account
 #: field:analytic.entries.report,nbr:0
@@ -228,7 +236,7 @@ msgstr "30 ימים מסוף החודש"
 #: model:account.payment.term,name:account.account_payment_term_net
 #: model:account.payment.term,note:account.account_payment_term_net
 msgid "30 Net Days"
-msgstr ""
+msgstr "30 ימי עסקים"
 
 #. module: account
 #: model:account.payment.term,name:account.account_payment_term_advance
@@ -543,7 +551,7 @@ msgstr ""
 #. module: account
 #: view:account.bank.statement:account.view_bank_statement_form2
 msgid "= Theoretical Closing Balance"
-msgstr ""
+msgstr "= מאזן סגירה תאורטי"
 
 #. module: account
 #: model:ir.model,name:account.model_temp_range
@@ -689,7 +697,7 @@ msgstr ""
 #. module: account
 #: model:ir.model,name:account.model_account_common_report
 msgid "Account Common Report"
-msgstr ""
+msgstr "דוח החשבון"
 
 #. module: account
 #: field:account.analytic.line,currency_id:0
@@ -1540,7 +1548,7 @@ msgstr ""
 #: view:account.analytic.line:account.view_account_analytic_line_filter
 #: model:ir.model,name:account.model_account_analytic_line
 msgid "Analytic Line"
-msgstr ""
+msgstr "שורת אנליטית"
 
 #. module: account
 #: view:account.move:account.view_move_form
@@ -1599,22 +1607,26 @@ msgstr "החל"
 
 #. module: account
 #: help:account.fiscal.position,auto_apply:0
-msgid "Apply automatically this fiscal position."
-msgstr ""
-
-#. module: account
-#: help:account.fiscal.position,country_group_id:0
-msgid "Apply only if delivery or invocing country match the group."
-msgstr ""
-
-#. module: account
-#: help:account.fiscal.position,country_id:0
-msgid "Apply only if delivery or invoicing country match."
+msgid "Apply automatically this fiscal position if the conditions match."
 msgstr ""
 
 #. module: account
 #: help:account.fiscal.position,vat_required:0
 msgid "Apply only if partner has a VAT number."
+msgstr ""
+
+#. module: account
+#: help:account.fiscal.position,country_group_id:0
+msgid ""
+"Apply when the shipping or invoicing country is in this country group, and "
+"no position matches the country directly."
+msgstr ""
+
+#. module: account
+#: help:account.fiscal.position,country_id:0
+msgid ""
+"Apply when the shipping or invoicing country matches. Takes precedence over "
+"positions matching on a country group."
 msgstr ""
 
 #. module: account
@@ -1841,7 +1853,7 @@ msgstr "בנק"
 #. module: account
 #: view:account.config.settings:account.view_account_config_settings
 msgid "Bank & Cash"
-msgstr ""
+msgstr "בנק ומזומנים"
 
 #. module: account
 #: field:account.bank.accounts.wizard,bank_account_id:0
@@ -1887,12 +1899,12 @@ msgstr ""
 #: view:account.bank.statement:account.view_bank_statement_search
 #: model:ir.model,name:account.model_account_bank_statement
 msgid "Bank Statement"
-msgstr ""
+msgstr "הצהרה בנקאית"
 
 #. module: account
 #: model:ir.model,name:account.model_account_bank_statement_line
 msgid "Bank Statement Line"
-msgstr ""
+msgstr "הצהרה בנקאית"
 
 #. module: account
 #: model:ir.actions.act_window,name:account.action_bank_statement_tree
@@ -2003,7 +2015,7 @@ msgstr ""
 #. module: account
 #: model:ir.filters,name:account.filter_invoice_country
 msgid "By Country"
-msgstr ""
+msgstr "לפי ארץ"
 
 #. module: account
 #: model:ir.filters,name:account.filter_invoice_product
@@ -2236,7 +2248,7 @@ msgstr "מזומן"
 #: view:account.bank.statement:account.view_bank_statement_form2
 #: field:account.journal,cash_control:0
 msgid "Cash Control"
-msgstr ""
+msgstr "ניהול מזומן"
 
 #. module: account
 #: view:account.journal:account.view_account_journal_form
@@ -2268,7 +2280,7 @@ msgstr ""
 #. module: account
 #: model:ir.model,name:account.model_account_cashbox_line
 msgid "CashBox Line"
-msgstr ""
+msgstr "שורת קופת מזומנים"
 
 #. module: account
 #: field:account.bank.statement,details_ids:0
@@ -2566,6 +2578,13 @@ msgstr ""
 #. module: account
 #: model:ir.model,name:account.model_account_open_closed_fiscalyear
 msgid "Choose Fiscal Year"
+msgstr ""
+
+#. module: account
+#. openerp-web
+#: code:addons/account/static/src/js/account_widgets.js:1297
+#, python-format
+msgid "Choose counterpart"
 msgstr ""
 
 #. module: account
@@ -2975,8 +2994,8 @@ msgstr ""
 
 #. module: account
 #: field:account.fiscal.position,country_id:0
-msgid "Countries"
-msgstr "מדינות"
+msgid "Country"
+msgstr "מדינה"
 
 #. module: account
 #: field:account.fiscal.position,country_group_id:0
@@ -3028,6 +3047,13 @@ msgstr ""
 #: view:account.invoice.refund:account.view_account_invoice_refund
 msgid "Create Refund"
 msgstr "צור החזר"
+
+#. module: account
+#. openerp-web
+#: code:addons/account/static/src/js/account_widgets.js:1294
+#, python-format
+msgid "Create Write-off"
+msgstr ""
 
 #. module: account
 #: selection:account.invoice.refund,filter_refund:0
@@ -3696,7 +3722,7 @@ msgstr "הפרש"
 msgid ""
 "Difference between the theoretical closing balance and the real closing "
 "balance."
-msgstr ""
+msgstr "שוני בין מאזן סגירה תאורטי לאמיתי."
 
 #. module: account
 #: view:account.open.closed.fiscalyear:account.view_account_open_closed_fiscalyear
@@ -3834,7 +3860,7 @@ msgstr ""
 #: view:website:account.report_agedpartnerbalance
 #: view:website:account.report_overdue_document
 msgid "Due"
-msgstr ""
+msgstr "עד"
 
 #. module: account
 #. openerp-web
@@ -4451,7 +4477,7 @@ msgstr ""
 #: model:ir.actions.act_window,name:account.action_account_fiscal_position_form
 #: model:ir.ui.menu,name:account.menu_action_account_fiscal_position_form
 msgid "Fiscal Positions"
-msgstr ""
+msgstr "מצב כספי"
 
 #. module: account
 #: field:account.aged.trial.balance,fiscalyear_id:0
@@ -4554,7 +4580,7 @@ msgstr "קבוע"
 #. module: account
 #: selection:account.payment.term.line,value:0 selection:account.tax,type:0
 msgid "Fixed Amount"
-msgstr ""
+msgstr "מחיר קבוע:"
 
 #. module: account
 #: field:account.bank.statement,message_follower_ids:0
@@ -4818,7 +4844,7 @@ msgstr ""
 #: code:addons/account/account_move_line.py:552
 #, python-format
 msgid "Go to the configuration panel"
-msgstr ""
+msgstr "לך לפאנל ההגדרות"
 
 #. module: account
 #. openerp-web
@@ -5190,7 +5216,7 @@ msgstr ""
 msgid ""
 "In order to delete a bank statement line, you must first cancel it to delete"
 " related journal items."
-msgstr ""
+msgstr "על מנת למחוק שורת דיווח בנקאי, יש לבטלו קודם, על מנת למחוק את כל רישומי היומן הקשורים אליו."
 
 #. module: account
 #: code:addons/account/account_bank_statement.py:392
@@ -5198,7 +5224,7 @@ msgstr ""
 msgid ""
 "In order to delete a bank statement, you must first cancel it to delete "
 "related journal items."
-msgstr ""
+msgstr "על מנת למחוק דיווח בנקאי, יש לבטלו קודם, כדי למחוק את כל רישומי היומן הקשורים אליו. "
 
 #. module: account
 #: field:account.partner.ledger,initial_balance:0
@@ -5227,7 +5253,7 @@ msgstr ""
 #: field:product.category,property_account_income_categ:0
 #: field:product.template,property_account_income:0
 msgid "Income Account"
-msgstr ""
+msgstr "חשבון הכנסות"
 
 #. module: account
 #: field:account.chart.template,property_account_income:0
@@ -5303,7 +5329,7 @@ msgstr ""
 #. module: account
 #: view:product.template:account.product_template_form_view
 msgid "Internal Category"
-msgstr ""
+msgstr "קטגוריה פנימית"
 
 #. module: account
 #: field:account.tax.template,description:0
@@ -5319,7 +5345,7 @@ msgstr ""
 #. module: account
 #: field:account.account,note:0
 msgid "Internal Notes"
-msgstr ""
+msgstr "הערות פנימיות"
 
 #. module: account
 #: field:account.journal,internal_account_id:0
@@ -5433,7 +5459,7 @@ msgstr ""
 #. module: account
 #: field:account.invoice.report,state:0
 msgid "Invoice Status"
-msgstr ""
+msgstr "מצב חשבונית"
 
 #. module: account
 #: view:account.analytic.line:account.view_account_analytic_line_filter
@@ -5575,7 +5601,7 @@ msgstr ""
 #. module: account
 #: help:account.journal,default_debit_account_id:0
 msgid "It acts as a default account for debit amount"
-msgstr ""
+msgstr "משמש כחשבון ברירת מחדל אבל סכום החיוב"
 
 #. module: account
 #: help:account.partner.ledger,amount_currency:0
@@ -5718,7 +5744,7 @@ msgstr ""
 #: field:account.invoice,move_id:0 field:account.invoice,move_name:0
 #: field:account.move.line,move_id:0
 msgid "Journal Entry"
-msgstr ""
+msgstr "רשומה ביומן"
 
 #. module: account
 #: view:account.model:account.view_model_form
@@ -5931,9 +5957,16 @@ msgstr ""
 
 #. module: account
 #. openerp-web
+#: code:addons/account/static/src/js/account_widgets.js:1299
+#, python-format
+msgid "Keep open"
+msgstr ""
+
+#. module: account
+#. openerp-web
 #: field:account.statement.operation.template,label:0
-#: code:addons/account/static/src/js/account_widgets.js:75
-#: code:addons/account/static/src/js/account_widgets.js:80
+#: code:addons/account/static/src/js/account_widgets.js:74
+#: code:addons/account/static/src/js/account_widgets.js:79
 #: view:website:account.report_journal
 #: view:website:account.report_salepurchasejournal
 #, python-format
@@ -6177,7 +6210,7 @@ msgstr ""
 #. module: account
 #: field:account.analytic.journal,line_ids:0 field:account.tax.code,line_ids:0
 msgid "Lines"
-msgstr ""
+msgstr "שורות"
 
 #. module: account
 #: help:account.invoice,move_id:0
@@ -6720,7 +6753,7 @@ msgstr "נובמבר"
 #. module: account
 #: field:account.invoice,number:0 field:account.move,name:0
 msgid "Number"
-msgstr ""
+msgstr "מספר"
 
 #. module: account
 #: view:account.move.line:account.view_account_move_line_filter
@@ -6762,7 +6795,7 @@ msgstr ""
 #: code:addons/account/static/src/xml/account_bank_statement_reconciliation.xml:21
 #, python-format
 msgid "OK"
-msgstr ""
+msgstr "אוקי"
 
 #. module: account
 #: code:addons/account/account.py:3199
@@ -6875,7 +6908,7 @@ msgstr ""
 #: code:addons/account/account.py:435 code:addons/account/account.py:447
 #, python-format
 msgid "Opening Balance"
-msgstr ""
+msgstr "מאזן פתיחה"
 
 #. module: account
 #: view:account.bank.statement:account.view_bank_statement_form2
@@ -7238,12 +7271,12 @@ msgstr ""
 #. module: account
 #: view:account.invoice:account.invoice_supplier_form
 msgid "Payment Date"
-msgstr ""
+msgstr "תאריך תשלום"
 
 #. module: account
 #: field:account.invoice,reference_type:0
 msgid "Payment Reference"
-msgstr ""
+msgstr "מקור תשלום"
 
 #. module: account
 #: field:account.invoice.report,payment_term:0
@@ -7272,7 +7305,7 @@ msgstr "תנאי תשלום:"
 #: model:ir.actions.act_window,name:account.action_payment_term_form
 #: model:ir.ui.menu,name:account.menu_action_payment_term_form
 msgid "Payment Terms"
-msgstr ""
+msgstr "תנאי תשלום"
 
 #. module: account
 #: view:account.payment.term:account.view_payment_term_form
@@ -7284,7 +7317,7 @@ msgstr ""
 #: view:account.invoice:account.invoice_supplier_form
 #: selection:account.vat.declaration,based_on:0
 msgid "Payments"
-msgstr ""
+msgstr "תשלומים"
 
 #. module: account
 #: field:res.company,paypal_account:0
@@ -7537,7 +7570,7 @@ msgstr ""
 #: selection:account.move,state:0
 #: view:account.move.line:account.view_account_move_line_filter
 msgid "Posted"
-msgstr ""
+msgstr "פורסם"
 
 #. module: account
 #: view:account.move:account.view_account_move_filter
@@ -7657,7 +7690,7 @@ msgstr "פריט"
 #. module: account
 #: model:ir.model,name:account.model_product_category
 msgid "Product Category"
-msgstr ""
+msgstr "קטגורית מוצר"
 
 #. module: account
 #: view:account.analytic.line:account.account_analytic_line_extended_form
@@ -7668,7 +7701,7 @@ msgstr ""
 #. module: account
 #: field:account.invoice.report,product_qty:0
 msgid "Product Quantity"
-msgstr ""
+msgstr "כמות המוצר"
 
 #. module: account
 #: model:ir.model,name:account.model_product_template
@@ -7823,13 +7856,13 @@ msgstr ""
 #. module: account
 #: view:account.analytic.line:account.view_account_analytic_line_filter
 msgid "Purchases"
-msgstr ""
+msgstr "רכישות"
 
 #. module: account
 #: view:cash.box.in:account.cash_box_in_form
 #: model:ir.actions.act_window,name:account.action_cash_box_in
 msgid "Put Money In"
-msgstr ""
+msgstr "הכנס כסף"
 
 #. module: account
 #: field:account.tax,python_compute:0 selection:account.tax,type:0
@@ -7875,7 +7908,7 @@ msgstr ""
 #. module: account
 #: view:account.bank.statement:account.view_bank_statement_form2
 msgid "Real Closing Balance"
-msgstr ""
+msgstr "מאזן סגירה אמיתי"
 
 #. module: account
 #: field:account.invoice.refund,description:0 field:cash.box.in,name:0
@@ -8325,6 +8358,12 @@ msgstr ""
 #. module: account
 #: selection:account.config.settings,tax_calculation_rounding_method:0
 msgid "Round per line"
+msgstr ""
+
+#. module: account
+#: code:addons/account/account_bank_statement.py:899
+#, python-format
+msgid "Rounding error from currency conversion"
 msgstr ""
 
 #. module: account
@@ -8782,7 +8821,7 @@ msgstr ""
 #. module: account
 #: field:account.account,shortcut:0 field:account.account.template,shortcut:0
 msgid "Shortcut"
-msgstr ""
+msgstr "קיצור דרך"
 
 #. module: account
 #. openerp-web
@@ -8925,7 +8964,7 @@ msgstr ""
 #. module: account
 #: field:account.config.settings,date_start:0
 msgid "Start date"
-msgstr ""
+msgstr "תאריך התחלה"
 
 #. module: account
 #: field:account.period,date_start:0
@@ -8970,7 +9009,7 @@ msgstr ""
 #: field:account.bank.statement.line,statement_id:0
 #: field:account.move.line,statement_id:0
 msgid "Statement"
-msgstr ""
+msgstr "הצהרה"
 
 #. module: account
 #: code:addons/account/account_bank_statement.py:352
@@ -8990,7 +9029,7 @@ msgstr ""
 #: view:account.bank.statement:account.view_bank_statement_form2
 #: field:account.bank.statement,line_ids:0
 msgid "Statement lines"
-msgstr ""
+msgstr "שורות הצהרה"
 
 #. module: account
 #: model:ir.ui.menu,name:account.menu_account_pp_statements
@@ -9065,7 +9104,7 @@ msgstr "סיכום ביניים"
 #. module: account
 #: view:account.bank.statement:account.view_bank_statement_form2
 msgid "Sum of opening balance and transactions."
-msgstr ""
+msgstr "סיכום מאזני הפתיחה והעסקאות"
 
 #. module: account
 #: field:account.bank.statement,message_summary:0
@@ -9147,7 +9186,7 @@ msgstr "ספקים"
 #. module: account
 #: view:website:account.report_invoice_document
 msgid "TIN:"
-msgstr ""
+msgstr "קופה:"
 
 #. module: account
 #: view:cash.box.out:account.cash_box_out_form
@@ -9619,6 +9658,20 @@ msgid ""
 msgstr ""
 
 #. module: account
+#: constraint:account.config.settings:0
+msgid ""
+"The company of the gain exchange rate account must be the same than the "
+"company selected."
+msgstr ""
+
+#. module: account
+#: constraint:account.config.settings:0
+msgid ""
+"The company of the loss exchange rate account must be the same than the "
+"company selected."
+msgstr ""
+
+#. module: account
 #: help:account.tax,type:0
 msgid "The computation method for the tax amount."
 msgstr ""
@@ -9645,6 +9698,11 @@ msgstr ""
 #: help:res.partner,property_account_position:0
 msgid ""
 "The fiscal position will determine taxes and accounts used for the partner."
+msgstr ""
+
+#. module: account
+#: view:account.config.settings:account.view_account_config_settings
+msgid "The fiscal year is created when installing a Chart of Account."
 msgstr ""
 
 #. module: account
@@ -9959,6 +10017,30 @@ msgid "This Year"
 msgstr "שנה נוכחית"
 
 #. module: account
+#: help:product.template,property_account_expense:0
+msgid ""
+"This account will be used for invoices instead of the default one to value "
+"expenses for the current product."
+msgstr ""
+
+#. module: account
+#: help:product.template,property_account_income:0
+msgid ""
+"This account will be used for invoices instead of the default one to value "
+"sales for the current product."
+msgstr ""
+
+#. module: account
+#: help:product.category,property_account_expense_categ:0
+msgid "This account will be used for invoices to value expenses."
+msgstr ""
+
+#. module: account
+#: help:product.category,property_account_income_categ:0
+msgid "This account will be used for invoices to value sales."
+msgstr ""
+
+#. module: account
 #: help:res.partner,property_account_payable:0
 msgid ""
 "This account will be used instead of the default one as the payable account "
@@ -9970,18 +10052,6 @@ msgstr ""
 msgid ""
 "This account will be used instead of the default one as the receivable "
 "account for the current partner"
-msgstr ""
-
-#. module: account
-#: help:product.category,property_account_expense_categ:0
-#: help:product.template,property_account_expense:0
-msgid "This account will be used to value outgoing stock using cost price."
-msgstr ""
-
-#. module: account
-#: help:product.category,property_account_income_categ:0
-#: help:product.template,property_account_income:0
-msgid "This account will be used to value outgoing stock using sale price."
 msgstr ""
 
 #. module: account
@@ -10298,7 +10368,7 @@ msgstr ""
 #. openerp-web
 #: code:addons/account/static/src/xml/account_bank_statement_reconciliation.xml:36
 #, python-format
-msgid "Tip : Hit ctrl-enter to validate the whole sheet."
+msgid "Tip : Hit ctrl-enter to reconcile all balanced items."
 msgstr ""
 
 #. module: account
@@ -10809,7 +10879,7 @@ msgstr ""
 #: view:account.invoice:account.invoice_form
 #: view:account.invoice:account.invoice_supplier_form
 msgid "Validate"
-msgstr ""
+msgstr "אשר"
 
 #. module: account
 #: model:ir.model,name:account.model_validate_account_move
@@ -10836,7 +10906,7 @@ msgstr ""
 #. module: account
 #: field:account.journal.cashbox.line,pieces:0
 msgid "Values"
-msgstr ""
+msgstr "ערכים"
 
 #. module: account
 #: field:account.invoice,check_total:0
@@ -11053,6 +11123,13 @@ msgid ""
 msgstr ""
 
 #. module: account
+#. openerp-web
+#: code:addons/account/static/src/js/account_widgets.js:1050
+#, python-format
+msgid "last"
+msgstr ""
+
+#. module: account
 #: help:account.move.line,blocked:0
 msgid ""
 "You can check this box to mark this journal item as a litigation with the "
@@ -11060,13 +11137,21 @@ msgid ""
 msgstr ""
 
 #. module: account
-#: code:addons/account/account_move_line.py:1220
+#: code:addons/account/account_move_line.py:1246
 #, python-format
 msgid "You can not add/modify entries in a closed period %s of journal %s."
 msgstr ""
 
 #. module: account
-#: code:addons/account/account.py:1047
+#: code:addons/account/wizard/account_open_closed_fiscalyear.py:42
+#, python-format
+msgid ""
+"You can not cancel closing entries if the 'End of Year Entries Journal' "
+"period is closed."
+msgstr ""
+
+#. module: account
+#: code:addons/account/account.py:1057
 #, python-format
 msgid "You can not re-open a period which belongs to closed fiscal year"
 msgstr ""
@@ -11112,7 +11197,7 @@ msgid ""
 msgstr ""
 
 #. module: account
-#: code:addons/account/account.py:2273
+#: code:addons/account/account.py:2293
 #, python-format
 msgid ""
 "You can specify year, month and date in the name of the model using the following labels:\n"
@@ -11518,7 +11603,7 @@ msgstr ""
 #. module: account
 #: view:account.config.settings:account.view_account_config_settings
 msgid "eInvoicing & Payments"
-msgstr ""
+msgstr "חשבונית אלקטרוני ותשלומים"
 
 #. module: account
 #: view:account.entries.report:account.view_account_entries_report_search
